@@ -1,0 +1,1 @@
+9999999999{"name": "pdf2image", "version": "1.16.0", "summary": "A wrapper around the pdftoppm and pdftocairo command line tools to convert PDF to a PIL Image list.", "platform": "", "requires_dist": ["pillow"], "requires_python": "", "files": [], "_cache_version": "1.0.0"}

@@ -1,0 +1,1 @@
+9999999999{"name": "pyxnat", "version": "1.5", "summary": "XNAT in Python", "platform": "any", "requires_dist": ["lxml (>=4.3)", "requests (>=2.20)", "pathlib (>=1.0)", "six (>=1.15)", "future (>=0.16)"], "requires_python": "", "files": [], "_cache_version": "1.0.0"}

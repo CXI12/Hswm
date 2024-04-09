@@ -1,0 +1,240 @@
+ERROR:root:
+--------------------
+發生錯誤:
+2023-12-08T17-15-18
+'none'
+--------------------
+Traceback (most recent call last):
+  File "/home/runner/project/venv/lib/python3.8/site-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/runner/project/venv/lib/python3.8/site-packages/flask/app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/runner/project/venv/lib/python3.8/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+  File "/home/runner/project/modules/tskn.py", line 391, in __add
+    id = str(maps[rvalue["end_time"]][day])
+KeyError: 'none'
+ERROR:root:
+--------------------
+發生錯誤:
+2023-12-10T09-41-25
+42
+--------------------
+Traceback (most recent call last):
+  File "/home/runner/project/venv/lib/python3.8/site-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/runner/project/venv/lib/python3.8/site-packages/flask/app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/runner/project/venv/lib/python3.8/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+  File "/home/runner/project/modules/qa.py", line 528, in __rating
+    return render_template("rate.html",
+  File "/home/runner/project/venv/lib/python3.8/site-packages/flask/templating.py", line 148, in render_template
+    return _render(app, template, context)
+  File "/home/runner/project/venv/lib/python3.8/site-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+  File "/home/runner/project/venv/lib/python3.8/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/home/runner/project/venv/lib/python3.8/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/runner/project/templates/rate.html", line 80, in top-level template code
+    <span class="text-end" id="cc{{i['id']}}-{{l.index(i)}}">{{users[i["user"]]["fullname"] if false else rd.choice(users)["fullname"]}}</span>
+  File "/nix/store/2vm88xw7513h9pyjyafw32cps51b0ia1-python3-3.8.12/lib/python3.8/random.py", line 291, in choice
+    return seq[i]
+KeyError: 42
+ERROR:root:
+--------------------
+發生錯誤:
+2023-12-10T09-42-58
+'dict_values' object is not subscriptable
+--------------------
+Traceback (most recent call last):
+  File "/home/runner/project/venv/lib/python3.8/site-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/runner/project/venv/lib/python3.8/site-packages/flask/app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/runner/project/venv/lib/python3.8/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+  File "/home/runner/project/modules/qa.py", line 528, in __rating
+    return render_template("rate.html",
+  File "/home/runner/project/venv/lib/python3.8/site-packages/flask/templating.py", line 148, in render_template
+    return _render(app, template, context)
+  File "/home/runner/project/venv/lib/python3.8/site-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+  File "/home/runner/project/venv/lib/python3.8/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/home/runner/project/venv/lib/python3.8/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/runner/project/templates/rate.html", line 80, in top-level template code
+    <span class="text-end" id="cc{{i['id']}}-{{l.index(i)}}">{{users[i["user"]]["fullname"] if false else rd.choice(users.values())["fullname"]}}</span>
+  File "/nix/store/2vm88xw7513h9pyjyafw32cps51b0ia1-python3-3.8.12/lib/python3.8/random.py", line 291, in choice
+    return seq[i]
+TypeError: 'dict_values' object is not subscriptable
+ERROR:root:
+--------------------
+發生錯誤:
+2023-12-10T09-43-34
+'dict_values' object is not subscriptable
+--------------------
+Traceback (most recent call last):
+  File "/home/runner/project/venv/lib/python3.8/site-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/runner/project/venv/lib/python3.8/site-packages/flask/app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/runner/project/venv/lib/python3.8/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+  File "/home/runner/project/modules/qa.py", line 528, in __rating
+    return render_template("rate.html",
+  File "/home/runner/project/venv/lib/python3.8/site-packages/flask/templating.py", line 148, in render_template
+    return _render(app, template, context)
+  File "/home/runner/project/venv/lib/python3.8/site-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+  File "/home/runner/project/venv/lib/python3.8/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/home/runner/project/venv/lib/python3.8/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/runner/project/templates/rate.html", line 80, in top-level template code
+    <span class="text-end" id="cc{{i['id']}}-{{l.index(i)}}">{{users[i["user"]]["fullname"] if false else dict(rd.choice(users.values()))["fullname"]}}</span>
+  File "/nix/store/2vm88xw7513h9pyjyafw32cps51b0ia1-python3-3.8.12/lib/python3.8/random.py", line 291, in choice
+    return seq[i]
+TypeError: 'dict_values' object is not subscriptable
+ERROR:root:
+--------------------
+發生錯誤:
+2023-12-10T09-43-56
+'dict_values' object is not subscriptable
+--------------------
+Traceback (most recent call last):
+  File "/home/runner/project/venv/lib/python3.8/site-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/runner/project/venv/lib/python3.8/site-packages/flask/app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/runner/project/venv/lib/python3.8/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+  File "/home/runner/project/modules/qa.py", line 528, in __rating
+    return render_template("rate.html",
+  File "/home/runner/project/venv/lib/python3.8/site-packages/flask/templating.py", line 148, in render_template
+    return _render(app, template, context)
+  File "/home/runner/project/venv/lib/python3.8/site-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+  File "/home/runner/project/venv/lib/python3.8/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/home/runner/project/venv/lib/python3.8/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/runner/project/templates/rate.html", line 80, in top-level template code
+    <span class="text-end" id="cc{{i['id']}}-{{l.index(i)}}">{{users[i["user"]]["fullname"] if false else dict(rd.choice(users.values()))["fullname"]}}</span>
+  File "/nix/store/2vm88xw7513h9pyjyafw32cps51b0ia1-python3-3.8.12/lib/python3.8/random.py", line 291, in choice
+    return seq[i]
+TypeError: 'dict_values' object is not subscriptable
+ERROR:root:
+--------------------
+發生錯誤:
+2023-12-10T09-44-13
+'dict_values' object is not subscriptable
+--------------------
+Traceback (most recent call last):
+  File "/home/runner/project/venv/lib/python3.8/site-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/runner/project/venv/lib/python3.8/site-packages/flask/app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/runner/project/venv/lib/python3.8/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+  File "/home/runner/project/modules/qa.py", line 528, in __rating
+    return render_template("rate.html",
+  File "/home/runner/project/venv/lib/python3.8/site-packages/flask/templating.py", line 148, in render_template
+    return _render(app, template, context)
+  File "/home/runner/project/venv/lib/python3.8/site-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+  File "/home/runner/project/venv/lib/python3.8/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/home/runner/project/venv/lib/python3.8/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/runner/project/templates/rate.html", line 80, in top-level template code
+    <span class="text-end" id="cc{{i['id']}}-{{l.index(i)}}">{{users[i["user"]]["fullname"] if false else dict(rd.choice(users.values()))}}</span>
+  File "/nix/store/2vm88xw7513h9pyjyafw32cps51b0ia1-python3-3.8.12/lib/python3.8/random.py", line 291, in choice
+    return seq[i]
+TypeError: 'dict_values' object is not subscriptable
+ERROR:root:
+--------------------
+發生錯誤:
+2023-12-10T09-44-18
+'dict_values' object is not subscriptable
+--------------------
+Traceback (most recent call last):
+  File "/home/runner/project/venv/lib/python3.8/site-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/runner/project/venv/lib/python3.8/site-packages/flask/app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/runner/project/venv/lib/python3.8/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+  File "/home/runner/project/modules/qa.py", line 528, in __rating
+    return render_template("rate.html",
+  File "/home/runner/project/venv/lib/python3.8/site-packages/flask/templating.py", line 148, in render_template
+    return _render(app, template, context)
+  File "/home/runner/project/venv/lib/python3.8/site-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+  File "/home/runner/project/venv/lib/python3.8/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/home/runner/project/venv/lib/python3.8/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/runner/project/templates/rate.html", line 80, in top-level template code
+    <span class="text-end" id="cc{{i['id']}}-{{l.index(i)}}">{{users[i["user"]]["fullname"] if false else dict(rd.choice(users.values()))}}</span>
+  File "/nix/store/2vm88xw7513h9pyjyafw32cps51b0ia1-python3-3.8.12/lib/python3.8/random.py", line 291, in choice
+    return seq[i]
+TypeError: 'dict_values' object is not subscriptable
+ERROR:root:
+--------------------
+發生錯誤:
+2023-12-10T09-44-21
+'dict_values' object is not subscriptable
+--------------------
+Traceback (most recent call last):
+  File "/home/runner/project/venv/lib/python3.8/site-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/runner/project/venv/lib/python3.8/site-packages/flask/app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/runner/project/venv/lib/python3.8/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+  File "/home/runner/project/modules/qa.py", line 528, in __rating
+    return render_template("rate.html",
+  File "/home/runner/project/venv/lib/python3.8/site-packages/flask/templating.py", line 148, in render_template
+    return _render(app, template, context)
+  File "/home/runner/project/venv/lib/python3.8/site-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+  File "/home/runner/project/venv/lib/python3.8/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/home/runner/project/venv/lib/python3.8/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/runner/project/templates/rate.html", line 80, in top-level template code
+    <span class="text-end" id="cc{{i['id']}}-{{l.index(i)}}">{{users[i["user"]]["fullname"] if false else dict(rd.choice(users.values()))}}</span>
+  File "/nix/store/2vm88xw7513h9pyjyafw32cps51b0ia1-python3-3.8.12/lib/python3.8/random.py", line 291, in choice
+    return seq[i]
+TypeError: 'dict_values' object is not subscriptable
+ERROR:root:
+--------------------
+發生錯誤:
+2023-12-10T09-44-24
+'dict_values' object is not subscriptable
+--------------------
+Traceback (most recent call last):
+  File "/home/runner/project/venv/lib/python3.8/site-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/runner/project/venv/lib/python3.8/site-packages/flask/app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/runner/project/venv/lib/python3.8/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+  File "/home/runner/project/modules/qa.py", line 528, in __rating
+    return render_template("rate.html",
+  File "/home/runner/project/venv/lib/python3.8/site-packages/flask/templating.py", line 148, in render_template
+    return _render(app, template, context)
+  File "/home/runner/project/venv/lib/python3.8/site-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+  File "/home/runner/project/venv/lib/python3.8/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/home/runner/project/venv/lib/python3.8/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/runner/project/templates/rate.html", line 80, in top-level template code
+    <span class="text-end" id="cc{{i['id']}}-{{l.index(i)}}">{{users[i["user"]]["fullname"] if false else dict(rd.choice(users.values()))}}</span>
+  File "/nix/store/2vm88xw7513h9pyjyafw32cps51b0ia1-python3-3.8.12/lib/python3.8/random.py", line 291, in choice
+    return seq[i]
+TypeError: 'dict_values' object is not subscriptable

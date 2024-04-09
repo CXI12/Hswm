@@ -1,0 +1,1 @@
+9999999999{"name": "pyexcel-ezodf", "version": "0.3.4", "summary": "A Python package to create/manipulate OpenDocumentFormat files", "platform": "", "requires_dist": ["lxml"], "requires_python": null, "files": [], "_cache_version": "1.0.0"}

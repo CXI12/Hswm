@@ -1,0 +1,639 @@
+{
+  "flex_menu":{
+    "type": "carousel",
+    "contents": [
+      {
+        "type": "bubble",
+        "body": {
+          "type": "box",
+          "layout": "vertical",
+          "contents": [
+            {
+              "type": "button",
+              "action": {
+                "type": "postback",
+                "data": "login",
+                "label": "綁定帳號"
+              },
+              "style": "primary",
+              "adjustMode": "shrink-to-fit",
+              "color": "#4469FF"
+            }
+          ],
+          "backgroundColor": "#4469FF"
+        }
+      },
+      {
+        "type": "bubble",
+        "body": {
+          "type": "box",
+          "layout": "vertical",
+          "contents": [
+            {
+              "type": "button",
+              "action": {
+                "type": "uri",
+                "label": "問題回報",
+                "uri": "https://project.106006project.repl.co/reporter"
+              },
+              "style": "primary",
+              "adjustMode": "shrink-to-fit",
+              "color": "#4469FF"
+            }
+          ],
+          "backgroundColor": "#4469FF"
+        }
+      },
+      {
+        "type": "bubble",
+        "body": {
+          "type": "box",
+          "layout": "vertical",
+          "contents": [
+            {
+              "type": "button",
+              "action": {
+                "type": "message",
+                "label": "刷新選單",
+                "text": "選單"
+              },
+              "style": "primary",
+              "adjustMode": "shrink-to-fit",
+              "color": "#4469FF"
+            }
+          ],
+          "backgroundColor": "#4469FF"
+        }
+      }
+    ]
+  },
+  "flex_login":{
+    "type": "bubble",
+    "body": {
+      "type": "box",
+      "layout": "vertical",
+      "contents": [
+        {
+          "type": "button",
+          "action": {
+            "type": "uri",
+            "label": "按此綁定帳號",
+            "uri": "https://project.106006project.repl.co/line_login?user_id="
+          },
+          "style": "primary"
+        }
+      ],
+      "backgroundColor": "#17c950"
+    }
+  },
+  "flex_logout":{
+    "type": "bubble",
+    "body": {
+      "type": "box",
+      "layout": "vertical",
+      "contents": [
+        {
+          "type": "button",
+          "action": {
+            "type": "uri",
+            "label": "按此解除帳號綁定",
+            "uri": "https://project.106006project.repl.co/line_logout?user_id="
+          },
+          "style": "primary"
+        }
+      ],
+      "backgroundColor": "#17c950"
+    }
+  },
+  "tasks":{
+    "type": "carousel",
+    "contents": []
+  },
+  "task":{
+      "type": "bubble",
+      "hero": {
+        "type": "box",
+        "layout": "vertical",
+        "contents": [
+          {
+            "type": "text",
+            "text": "TITLE",
+            "weight": "bold",
+            "align": "center",
+            "gravity": "center",
+            "wrap": true,
+            "size": "xxl",
+            "margin": "xxl"
+          }
+        ]
+      },
+      "body": {
+        "type": "box",
+        "layout": "vertical",
+        "contents": [
+          {
+            "type": "box",
+            "layout": "vertical",
+            "contents": [
+              {
+                "type": "text",
+                "text": "start_date time"
+              },
+              {
+                "type": "text",
+                "text": "至",
+                "margin": "md",
+                "weight": "bold"
+              },
+              {
+                "type": "text",
+                "text": "end_date end_time",
+                "margin": "md"
+              }
+            ]
+          },
+          {
+            "type": "box",
+            "layout": "vertical",
+            "contents": [
+              {
+                "type": "text",
+                "text": "TASKER",
+                "weight": "bold",
+                "align": "end",
+                "color": "#4469FF",
+                "margin": "xxl"
+              }
+            ]
+          }
+        ]
+      },
+      "footer": {
+        "type": "box",
+        "layout": "vertical",
+        "contents": [
+          {
+            "type": "button",
+            "action": {
+              "type": "uri",
+              "label": " 內容",
+              "uri": "https://project.106006project.repl.co/sche/"
+            },
+            "style": "primary",
+            "color": "#4469FF"
+          }
+        ]
+      }
+    },
+  "flex_menu_stu":{
+    "type": "carousel",
+    "contents": [
+      {
+        "type": "bubble",
+        "body": {
+          "type": "box",
+          "layout": "vertical",
+          "contents": [
+            {
+              "type": "button",
+              "action": {
+                "type": "postback",
+                "data": "view_task",
+                "label": "檢視作業"
+              },
+              "style": "primary",
+              "adjustMode": "shrink-to-fit",
+              "color": "#4469FF"
+            }
+          ],
+          "backgroundColor": "#4469FF"
+        }
+      },
+      {
+        "type": "bubble",
+        "body": {
+          "type": "box",
+          "layout": "vertical",
+          "contents": [
+            {
+              "type": "button",
+              "action": {
+                "type": "postback",
+                "label": "發問",
+                "data": "ask"
+              },
+              "style": "primary",
+              "adjustMode": "shrink-to-fit",
+              "color": "#4469FF"
+            }
+          ],
+          "backgroundColor": "#4469FF"
+        }
+      },
+      {
+        "type": "bubble",
+        "body": {
+          "type": "box",
+          "layout": "vertical",
+          "contents": [
+            {
+              "type": "button",
+              "action": {
+                "type": "postback",
+                "data": "logout",
+                "label": "解除帳號綁定"
+              },
+              "style": "primary",
+              "adjustMode": "shrink-to-fit",
+              "color": "#4469FF"
+            }
+          ],
+          "backgroundColor": "#4469FF"
+        }
+      },
+      {
+        "type": "bubble",
+        "body": {
+          "type": "box",
+          "layout": "vertical",
+          "contents": [
+            {
+              "type": "button",
+              "action": {
+                "type": "uri",
+                "label": "問題回報",
+                "uri": "https://project.106006project.repl.co/reporter"
+              },
+              "style": "primary",
+              "adjustMode": "shrink-to-fit",
+              "color": "#4469FF"
+            }
+          ],
+          "backgroundColor": "#4469FF"
+        }
+      },
+      {
+        "type": "bubble",
+        "body": {
+          "type": "box",
+          "layout": "vertical",
+          "contents": [
+            {
+              "type": "button",
+              "action": {
+                "type": "message",
+                "label": "刷新選單",
+                "text": "選單"
+              },
+              "style": "primary",
+              "adjustMode": "shrink-to-fit",
+              "color": "#4469FF"
+            }
+          ],
+          "backgroundColor": "#4469FF"
+        }
+      }
+    ]
+  },
+  "flex_menu_asistnt":{
+    "type": "carousel",
+    "contents": [
+      {
+        "type": "bubble",
+        "body": {
+          "type": "box",
+          "layout": "vertical",
+          "contents": [
+            {
+              "type": "button",
+              "action": {
+                "type": "postback",
+                "data": "view_task",
+                "label": "檢視作業"
+              },
+              "style": "primary",
+              "adjustMode": "shrink-to-fit",
+              "color": "#4469FF"
+            }
+          ],
+          "backgroundColor": "#4469FF"
+        }
+      },
+      {
+        "type": "bubble",
+        "body": {
+          "type": "box",
+          "layout": "vertical",
+          "contents": [
+            {
+              "type": "button",
+              "action": {
+                "type": "postback",
+                "label": "發問",
+                "data": "ask"
+              },
+              "style": "primary",
+              "adjustMode": "shrink-to-fit",
+              "color": "#4469FF"
+            }
+          ],
+          "backgroundColor": "#4469FF"
+        }
+      },
+      {
+        "type": "bubble",
+        "body": {
+          "type": "box",
+          "layout": "vertical",
+          "contents": [
+            {
+              "type": "button",
+              "action": {
+                "type": "postback",
+                "data": "add_task",
+                "label": "新增作業"
+              },
+              "style": "primary",
+              "adjustMode": "shrink-to-fit",
+              "color": "#4469FF"
+            }
+          ],
+          "backgroundColor": "#4469FF"
+        }
+      },
+      {
+        "type": "bubble",
+        "body": {
+          "type": "box",
+          "layout": "vertical",
+          "contents": [
+            {
+              "type": "button",
+              "action": {
+                "type": "postback",
+                "data": "logout",
+                "label": "解除帳號綁定"
+              },
+              "style": "primary",
+              "adjustMode": "shrink-to-fit",
+              "color": "#4469FF"
+            }
+          ],
+          "backgroundColor": "#4469FF"
+        }
+      },
+      {
+        "type": "bubble",
+        "body": {
+          "type": "box",
+          "layout": "vertical",
+          "contents": [
+            {
+              "type": "button",
+              "action": {
+                "type": "uri",
+                "label": "問題回報",
+                "uri": "https://project.106006project.repl.co/reporter"
+              },
+              "style": "primary",
+              "adjustMode": "shrink-to-fit",
+              "color": "#4469FF"
+            }
+          ],
+          "backgroundColor": "#4469FF"
+        }
+      },
+      {
+        "type": "bubble",
+        "body": {
+          "type": "box",
+          "layout": "vertical",
+          "contents": [
+            {
+              "type": "button",
+              "action": {
+                "type": "message",
+                "label": "刷新選單",
+                "text": "選單"
+              },
+              "style": "primary",
+              "adjustMode": "shrink-to-fit",
+              "color": "#4469FF"
+            }
+          ],
+          "backgroundColor": "#4469FF"
+        }
+      }
+    ]
+  },
+  "flex_menu_tch":{
+    "type": "carousel",
+    "contents": [
+      {
+        "type": "bubble",
+        "body": {
+          "type": "box",
+          "layout": "vertical",
+          "contents": [
+            {
+              "type": "button",
+              "action": {
+                "type": "postback",
+                "data": "add_task",
+                "label": "新增作業"
+              },
+              "style": "primary",
+              "adjustMode": "shrink-to-fit",
+              "color": "#4469FF"
+            }
+          ],
+          "backgroundColor": "#4469FF"
+        }
+      },
+      {
+        "type": "bubble",
+        "body": {
+          "type": "box",
+          "layout": "vertical",
+          "contents": [
+            {
+              "type": "button",
+              "action": {
+                "type": "postback",
+                "data": "add_certi",
+                "label": "新增獎狀"
+              },
+              "style": "primary",
+              "adjustMode": "shrink-to-fit",
+              "color": "#4469FF"
+            }
+          ],
+          "backgroundColor": "#4469FF"
+        }
+      },
+      {
+        "type": "bubble",
+        "body": {
+          "type": "box",
+          "layout": "vertical",
+          "contents": [
+            {
+              "type": "button",
+              "action": {
+                "type": "postback",
+                "label": "發問",
+                "data": "ask"
+              },
+              "style": "primary",
+              "adjustMode": "shrink-to-fit",
+              "color": "#4469FF"
+            }
+          ],
+          "backgroundColor": "#4469FF"
+        }
+      },
+      {
+        "type": "bubble",
+        "body": {
+          "type": "box",
+          "layout": "vertical",
+          "contents": [
+            {
+              "type": "button",
+              "action": {
+                "type": "postback",
+                "data": "logout",
+                "label": "解除帳號綁定"
+              },
+              "style": "primary",
+              "adjustMode": "shrink-to-fit",
+              "color": "#4469FF"
+            }
+          ],
+          "backgroundColor": "#4469FF"
+        }
+      },
+      {
+        "type": "bubble",
+        "body": {
+          "type": "box",
+          "layout": "vertical",
+          "contents": [
+            {
+              "type": "button",
+              "action": {
+                "type": "uri",
+                "label": "問題回報",
+                "uri": "https://project.106006project.repl.co/reporter"
+              },
+              "style": "primary",
+              "adjustMode": "shrink-to-fit",
+              "color": "#4469FF"
+            }
+          ],
+          "backgroundColor": "#4469FF"
+        }
+      },
+      {
+        "type": "bubble",
+        "body": {
+          "type": "box",
+          "layout": "vertical",
+          "contents": [
+            {
+              "type": "button",
+              "action": {
+                "type": "message",
+                "label": "刷新選單",
+                "text": "選單"
+              },
+              "style": "primary",
+              "adjustMode": "shrink-to-fit",
+              "color": "#4469FF"
+            }
+          ],
+          "backgroundColor": "#4469FF"
+        }
+      }
+    ]
+  },
+  "classes":{
+    "type": "carousel",
+    "contents": []
+  },
+  "class":{
+      "type": "bubble",
+      "hero": {
+        "type": "box",
+        "layout": "vertical",
+        "contents": [
+          {
+            "type": "text",
+            "text": "CLASS",
+            "weight": "bold",
+            "align": "center",
+            "gravity": "center",
+            "wrap": true,
+            "size": "xxl",
+            "margin": "xxl"
+          }
+        ]
+      },
+      "footer": {
+        "type": "box",
+        "layout": "vertical",
+        "contents": [
+          {
+            "type": "button",
+            "action": {
+              "type": "uri",
+              "label": "新增",
+              "uri": "https://project.106006project.repl.co/tskn/add"
+            },
+            "style": "primary",
+            "color": "#4469FF"
+          }
+        ]
+      }
+    },
+  "flex_menu_adm":{
+    "type": "carousel",
+    "contents": [
+      {
+        "type": "bubble",
+        "hero": {
+          "type": "box",
+          "layout": "vertical",
+          "contents": [
+            {
+              "type": "text",
+              "text": "請在本網站進行操作",
+              "weight": "bold",
+              "align": "center",
+              "gravity": "center",
+              "wrap": true,
+              "size": "xxl",
+              "margin": "xxl"
+            }
+          ]
+        },
+        "footer": {
+          "type": "box",
+          "layout": "vertical",
+          "contents": [
+            {
+              "type": "button",
+              "action": {
+                "type": "uri",
+                "label": "前往首頁",
+                "uri": "https://project.106006project.repl.co/"
+              },
+              "style": "primary",
+              "color": "#4469FF"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

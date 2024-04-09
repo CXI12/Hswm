@@ -1,2 +1,1 @@
-# Hswm
-Hswm projection
+# HSWM-pro

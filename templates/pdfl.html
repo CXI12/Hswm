@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW" data-bs-theme="{{session.get('dark','light')}}">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+<meta name="google-site-verification" content="cprO5RyLKebRcuGNZ3vvB9sqHi9GJWklHWcQPByLebg" />
+    <meta charset="UTF-8">
+    <title>高中職小幫手｜已建立獎狀檢視</title>
+    <style>
+      a{
+        color: inherit;
+        text-decoration: none;
+      }
+    </style>
+</head>
+<body>
+    {{header|safe}}
+  <div class="container">
+    {%if not c%}
+  <a href="./certificate" class="btn btn-primary fw-bold" style="max-width:25rem;min-width:10rem;">新增</a>
+    <p></p>
+  <div class="border rounded p-2 overflow-scroll">
+    <table class="table border m-auto text-center" style="max-width:70rem">
+      <tr class="table-info">
+        <td class="td">序號</td>
+        <td class="td">建立時間</td>
+        <td class="td">檔案名稱</td>
+        <td class="td">動作按鈕</td>
+      </tr>
+      {%for key,value in data.items()%}
+      
+      <tr>
+        <td class="td">{{key}}</td>
+        <td class="td" style="min-width:10rem">{{value['time']}}</td>
+        <td class="td">{{value["filename"]}}</td>
+        
+        <td class="td">
+          <div class="btn-group">
+            <a href='/pdfs/{{value["filename"]}}' class="btn btn-outline-primary btn-lg" style="max-width:25rem;">開啟</a>
+            <a href="./dc?id={{key}}" class="btn btn-outline-danger btn-lg float-end" style="max-width:25rem;">刪除</a>
+          </div>
+      </tr>
+      {%endfor%}
+    </table>
+  </div>
+  {%else%}
+  <h1 style="text-align:center;">查無獎狀資料</h1>
+  <div class="text-center mt-5"><a href="./certificate" class="btn btn-primary fw-bold mx-auto" style="max-width:25rem;min-width:10rem;">新增</a></div>
+  <div class="text-center text-success">曾匿名產生獎狀嗎？</div>
+  <form method="post" class="input-group">
+    <input type="text" name="uid" id="uid-input" class="form-control" placeholder="輸入序號">
+    <button type="submit" class="btn btn-primary">取得獎狀</button>
+  </form>
+  {%endif%}
+  </div>
+{{footer|safe}}
+</body>
+</html>
