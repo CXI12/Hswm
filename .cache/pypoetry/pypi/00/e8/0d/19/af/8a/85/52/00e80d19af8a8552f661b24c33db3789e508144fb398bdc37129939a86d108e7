@@ -1,1 +1,0 @@
-9999999999{"name": "Flask-Compress", "version": "1.13", "summary": "Compress responses in your Flask app with gzip, deflate or brotli.", "platform": "any", "requires_dist": ["flask", "brotli"], "requires_python": "", "files": [], "_cache_version": "1.0.0"}

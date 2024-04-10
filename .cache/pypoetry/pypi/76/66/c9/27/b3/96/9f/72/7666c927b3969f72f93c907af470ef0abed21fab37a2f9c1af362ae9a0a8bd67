@@ -1,1 +1,0 @@
-9999999999{"name": "Flask-reCaptcha", "version": "0.4.2", "summary": "The new Google ReCaptcha implementation for Flask without Flask-WTF", "platform": "any", "requires_dist": ["flask", "requests"], "requires_python": null, "files": [], "_cache_version": "1.0.0"}

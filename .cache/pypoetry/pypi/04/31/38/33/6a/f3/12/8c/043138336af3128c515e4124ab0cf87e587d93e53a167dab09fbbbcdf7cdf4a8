@@ -1,1 +1,0 @@
-9999999999{"name": "configobj", "version": "5.0.6", "summary": "Config file reading, writing and validation.", "platform": "UNKNOWN", "requires_dist": ["six"], "requires_python": null, "files": [], "_cache_version": "1.0.0"}

@@ -1,1 +1,0 @@
-9999999999{"name": "fitz", "version": "0.0.1.dev2", "summary": "Fitz: Workflow Mangement for neuroimaging data.", "platform": "UNKNOWN", "requires_dist": ["configobj", "configparser", "httplib2", "nibabel", "nipype", "numpy", "pandas", "pyxnat", "scipy"], "requires_python": null, "files": [], "_cache_version": "1.0.0"}

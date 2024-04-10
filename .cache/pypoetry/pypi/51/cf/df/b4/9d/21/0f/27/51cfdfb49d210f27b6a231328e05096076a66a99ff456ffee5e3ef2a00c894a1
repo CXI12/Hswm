@@ -1,1 +1,0 @@
-9999999999{"name": "pyexcel-ods3", "version": "0.6.1", "summary": "A wrapper library to read, manipulate and write data in ods format", "platform": "", "requires_dist": ["pyexcel-io (>=0.6.2)", "lxml", "pyexcel-ezodf (>=0.3.3)"], "requires_python": ">=3.6", "files": [], "_cache_version": "1.0.0"}

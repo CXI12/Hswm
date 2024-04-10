@@ -1,1 +1,0 @@
-9999999999{"name": "gevent-websocket", "version": "0.10.1", "summary": "Websocket handler for the gevent pywsgi server, a Python network library", "platform": "", "requires_dist": ["gevent"], "requires_python": "", "files": [], "_cache_version": "1.0.0"}

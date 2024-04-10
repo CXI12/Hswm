@@ -1,1 +1,0 @@
-9999999999{"name": "prov", "version": "2.0.0", "summary": "A library for W3C Provenance Data Model supporting PROV-JSON, PROV-XML and PROV-O (RDF)", "platform": "", "requires_dist": ["python-dateutil (>=2.2)", "networkx (>=2.0)", "lxml (>=3.3.5)", "rdflib (>=4.2.1)", "pydot (>=1.2.0) ; extra == 'dot'"], "requires_python": ">=3.6, <4", "files": [], "_cache_version": "1.0.0"}
