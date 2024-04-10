@@ -116,11 +116,19 @@ from firebase_admin import messaging
 
 path="env.json"
 if os.path.exists(path):
+  with open(path) as f:
+    with open("env_hash.txt") as hf:
+      security_check=check_password_hash(hf.read(),f.read())
+      hf.close()
+    f.close()
+  if not security_check:
+    raise Exception("偵測到環境設定變更，無法啟動伺服器。")
   with open(path, mode="rb") as f:
     envs = orjson.loads(f.read())
     f.close()
   for ek,ev in envs.items():
     os.environ[ek]=ev
+    
 
 from apscheduler.schedulers.background import BackgroundScheduler
 

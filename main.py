@@ -1,7 +1,6 @@
 from gevent import monkey
 
 monkey.patch_all()
-
 import jinja2
 from modules.funcs import *
 from modules.imports import *

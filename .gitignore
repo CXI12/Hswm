@@ -1,5 +1,8 @@
 #customize
 node_modules/
+.cache/
+.config/
+.upm/
 
 
 #user data
