@@ -1,6 +1,14 @@
 #customize
 node_modules/
 
+#user data
+static/pdfs
+static/jsons/grades
+static/jsons/pdfs
+static/jsons/selfCalendar
+static/jsons/dbs
+
+
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

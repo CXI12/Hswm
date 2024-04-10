@@ -57,6 +57,11 @@ def __certificate():
           jdata[str(ind)] = pdf_data
         jdata.supd()
         os.remove(session.get("uploaded_multid"))
+        
+        uids=fetch_list(f"./static/jsons/anonymous_pdf.json")
+        uids.append(uid)
+        uids.supd()
+
         return redirect("/certi/")
 
     else:
@@ -96,6 +101,11 @@ def __certificate():
         km = max([int(i) for i in jdata.keys()]) + 1
         jdata[str(km)] = wdata["0"]
         jdata.supd()
+        
+      uids=fetch_list(f"./static/jsons/anonymous_pdf.json")
+      uids.append(uid)
+      uids.supd()
+
       return render_template("pdfr.html",
                              link="/pdfs/" + filename,
                              header=render_template("header.html"),
@@ -119,7 +129,7 @@ def __pdfl():
       return render_template("redirects.html",
                               link="/certi/pdfl",
                               letter="未輸入序號")
-    uids=fetch_json(f"./static/jsons/anonymous_pdf.json")
+    uids=fetch_list(f"./static/jsons/anonymous_pdf.json")
     if not uid in uids:
       return render_template("redirects.html",
                               link="/certi/pdfl",
