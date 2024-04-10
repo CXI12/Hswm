@@ -5,6 +5,8 @@ monkey.patch_all()
 import jinja2
 from modules.funcs import *
 from modules.imports import *
+
+
 from modules.user import User
 from modules.user import AnonymousUser
 from modules.sche import sche
@@ -1538,9 +1540,8 @@ def __fgupr():
 
 
 @app.route("/pdfs/<filename>")
-@login_required
 def __file(filename):
-  if not filename.startswith(current_user.id): return redirect("/")
+  if not (filename.startswith(current_user.id) or filename.startswith(current_user.certi_id)): return redirect("/")
   return send_from_directory(os.path.join(app.root_path, 'static/pdfs'),
                              filename)
 
@@ -1639,7 +1640,7 @@ http_server = WSGIServer(('0.0.0.0', 443),
                          log=sys.stdout)
 
 if __name__ == "__main__":
-  # app.run(host="0.0.0.0", port=8080, debug=True)
+  app.run(host="0.0.0.0", port=8080, debug=True)
   try:
     db = fetch_db("static/jsons/dbs/console.db")
     db.cs.execute("select count(*) from main")

@@ -114,7 +114,13 @@ import sqlite3
 import firebase_admin
 from firebase_admin import messaging
 
-
+path="env.json"
+if os.path.exists(path):
+  with open(path, mode="rb") as f:
+    envs = orjson.loads(f.read())
+    f.close()
+  for ek,ev in envs.items():
+    os.environ[ek]=ev
 
 from apscheduler.schedulers.background import BackgroundScheduler
 
