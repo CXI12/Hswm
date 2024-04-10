@@ -1,6 +1,7 @@
 #customize
 node_modules/
 
+
 #user data
 static/pdfs
 static/jsons/grades

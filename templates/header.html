@@ -76,6 +76,15 @@
                   首頁
                 </a>
               </div>
+              
+              <div class="col-4 py-0 my-0" style="max-height:10rem !important;">
+                <a href="/certi/" class="btn border-0 text-center border-0 {%if '/certi/' in request.path %}fw-bold text-primary{%else%}text-muted{%endif%}">
+                  <div class="bi fs-1 bi-filetype-pdf"></div>
+                  數位獎狀
+                  
+                </a>
+              </div>
+
               {%if current_user.is_authenticated%}
               <div class="col-4 py-0 my-0" style="max-height:10rem !important;">
                 <a href="/profile" class="btn border-0 text-center border-0 {%if request.path=='/profile'%}fw-bold text-primary{%else%}text-muted{%endif%}" aria-current="page">
@@ -135,13 +144,6 @@
                 <a href="/tskn/" class="btn border-0 text-center border-0 {%if '/tskn/' in request.path %}fw-bold text-primary{%else%}text-muted{%endif%}">
                   <div class="bi fs-1 bi-calendar-plus"></div>
                   班級排程
-                  
-                </a>
-              </div>
-              <div class="col-4 py-0 my-0" style="max-height:10rem !important;">
-                <a href="/certi/" class="btn border-0 text-center border-0 {%if '/certi/' in request.path %}fw-bold text-primary{%else%}text-muted{%endif%}">
-                  <div class="bi fs-1 bi-filetype-pdf"></div>
-                  獎狀產生
                   
                 </a>
               </div>
