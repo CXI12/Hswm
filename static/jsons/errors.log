@@ -1,0 +1,47 @@
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.16.5.4:8080
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 153-852-519
+INFO:werkzeug: * Detected change in '/workspaces/Hswm/main.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 153-852-519
+INFO:werkzeug: * Detected change in '/workspaces/Hswm/main.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.16.5.4:8080
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 786-136-857
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.16.5.4:8080
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 655-627-881
+INFO:werkzeug:127.0.0.1 - - [12/Apr/2024 03:48:52] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [12/Apr/2024 03:48:52] "GET /static/dependences/jquery/jquery-ui.min.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [12/Apr/2024 03:48:52] "GET /static/dependences/jquery/jquery-3.7.1.min.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [12/Apr/2024 03:48:52] "GET /static/dependences/jquery/jquery-smoothness-ui.min.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [12/Apr/2024 03:48:53] "GET /static/dependences/bootstrap/css/bootstrap.min.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [12/Apr/2024 03:48:53] "GET /static/dependences/bootstrap-icon/bootstrap-icons.min.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [12/Apr/2024 03:48:53] "GET /static/dependences/remixicon/remixicon.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [12/Apr/2024 03:48:53] "GET /static/dependences/bootstrap-fileinput/css/fileinput.min.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [12/Apr/2024 03:48:53] "GET /static/dependences/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [12/Apr/2024 03:48:53] "GET /static/dependences/bootstrap-fileinput/js/plugins/buffer.min.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [12/Apr/2024 03:48:53] "GET /static/dependences/bootstrap-fileinput/js/plugins/filetype.min.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [12/Apr/2024 03:48:53] "GET /static/dependences/bootstrap-fileinput/js/fileinput.min.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [12/Apr/2024 03:48:53] "GET /static/dependences/bootstrap-fileinput/js/locales/zh-TW.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [12/Apr/2024 03:48:53] "GET /static/pics/new_logo1.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [12/Apr/2024 03:48:53] "POST /reporter HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [12/Apr/2024 03:48:53] "GET /static/dependences/others/sw.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [12/Apr/2024 03:48:54] "GET /favicon.ico HTTP/1.1" 200 -
