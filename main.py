@@ -1639,7 +1639,7 @@ http_server = WSGIServer(('0.0.0.0', 443),
                          log=sys.stdout)
 
 if __name__ == "__main__":
-  app.run(host="0.0.0.0", port=8080, debug=True)
+  # app.run(host="0.0.0.0", port=8080, debug=True)
   try:
     db = fetch_db("static/jsons/dbs/console.db")
     db.cs.execute("select count(*) from main")
