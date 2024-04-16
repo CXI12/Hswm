@@ -124,7 +124,7 @@ def test():
   return render_template("test.html")
 
 
-@app.route("/auth",methods=["post"])
+# @app.route("/auth",methods=["post"])
 def __auth():
   req=request.form.to_dict()
   returns={"stat":False}
