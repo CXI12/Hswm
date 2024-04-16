@@ -127,8 +127,8 @@ pdfmetrics.registerFont(TTFont('kaiu', "./static/pdf/kaiu.ttf"))
 pdfmetrics.registerFont(TTFont('kaiub', "./static/pdf/kaiub.TTC"))
 registerFontFamily("kaiu", normal="kaiu", bold="kaiub")
 
-line_bot_api = LineBotApi(os.environ['Channel_access_token'])
-handler = WebhookHandler(os.environ['Channel_secret'])
+line_bot_api = LineBotApi(os.environ['Channel_access_token'.upper()])
+handler = WebhookHandler(os.environ['Channel_secret'.upper()])
 
 os.environ['OAUTHLIB_INSECURE_TRANSPORT'] = '1'
 

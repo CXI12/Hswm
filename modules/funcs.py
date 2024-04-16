@@ -113,9 +113,6 @@ class fetch_list(list):
   def maxKey(self):
     return -1
 
-class fetch_json(fetch_local_json):
-  pass
-
 
 class fetch_remote_json(dict):
 
@@ -202,6 +199,9 @@ class fetch_local_json(dict):
     if f:
       kl = list(map(int, kl))
     return max(kl) if kl else -1
+
+class fetch_json(fetch_local_json):
+  pass
 
 
 class fetch_users(fetch_json):
