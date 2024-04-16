@@ -113,35 +113,15 @@ import sqlite3
 
 import firebase_admin
 from firebase_admin import messaging
-
-path="env.json"
-env_exists=True
-if os.path.exists(path):
-  with open(path) as f:
-    with open(".env_hash") as hf:
-      security_check=check_password_hash(hf.read(),f.read())
-      hf.close()
-    f.close()
-elif os.environ.get("env_hash"):
-  with open(path) as f:
-    security_check=check_password_hash(os.environ.get("env_hash"),f.read())
-    f.close()
-else:
-  env_exists=False
-if env_exists:
-  if not security_check:
-    raise Exception("偵測到環境設定變更，無法啟動伺服器。")
-  with open(path, mode="rb") as f:
-    envs = orjson.loads(f.read())
-    f.close()
-  for ek,ev in envs.items():
-    os.environ[ek]=ev
-
     
 
 from apscheduler.schedulers.background import BackgroundScheduler
 
 calen = calendar.Calendar()
+
+data_domain=os.environ["DATA_DOMAIN"]
+main_domain=os.environ["MAIN_DOMAIN"]
+
 
 pdfmetrics.registerFont(TTFont('kaiu', "./static/pdf/kaiu.ttf"))
 pdfmetrics.registerFont(TTFont('kaiub', "./static/pdf/kaiub.TTC"))

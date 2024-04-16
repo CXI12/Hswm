@@ -118,6 +118,50 @@ class fetch_json(dict):
 
   def __init__(self, path, **kwargs):
     self._path = path
+    _token=str(uuid.uuid4())
+    tokens=fetch_local_json("static/jsons/tokens.json")
+    tokens[_token]={"_ctx":path,"_token":_token}
+    req=requests.post(data_domain+"/fetch",{"_ctx":path,"_token":_token})
+    if req.status_code == 200:
+      self._data = req.json()
+      super().__init__(re, **kwargs)
+    else:
+      write_json(path, {})
+      super().__init__({}, **kwargs)
+
+  def KVSwap(self):
+    return {j: i for i, j in self._data.items()}
+
+  def supd(self):
+    write_json(self._path, dict(self.items()))
+
+  def upd(self, data):
+    self._data = data
+    self.clear()
+    for k, v in data.items():
+      self[k] = v
+    write_json(self._path, self._data)
+
+  @property
+  def is_dict(self):
+    return True
+
+  @property
+  def maxKey(self):
+    kl = list(self.keys())
+    f = True
+    for i in kl:
+      if not i.isdigit(): f = False
+    if f:
+      kl = list(map(int, kl))
+    return max(kl) if kl else -1
+
+
+
+class fetch_local_json(dict):
+
+  def __init__(self, path, **kwargs):
+    self._path = path
     if os.path.exists(path):
       with open(path, mode="rb") as f:
         re = orjson.loads(f.read())

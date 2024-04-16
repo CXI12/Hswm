@@ -124,6 +124,19 @@ def test():
   return render_template("test.html")
 
 
+@app.route("/auth",methods=["post"])
+def __auth():
+  req=request.form.to_dict()
+  returns={"stat":False}
+  ctx,token,Csign,Tsign=req["ctx"],req["_token"],req["C-signature"],req["T-signature"]
+  if rsa.verify(ctx, Csign, os.environ["AUTH_PUBLIC_KEY"]) and rsa.verify(token, Tsign, os.environ["AUTH_PUBLIC_KEY"]):
+    
+  else:
+    returns["message"]="Context and Token verification failed."
+
+  return jsonify(returns)
+
+
 @app.route("/schqrc", methods=["post"])
 def __schqrc():
   if not "cls" in request.form: abort(400)
