@@ -16,9 +16,5 @@
     "hkg1",
     "hnd1"
   ],
-  "functions": {
-    "**": {
-      "excludeFiles": "{.next,*.cache,node_modules,public,app}/**"
-    }
-  }
+  "excludeFiles": "{.next,*.cache,node_modules,public,app}/**"
 }
