@@ -113,15 +113,19 @@ class fetch_list(list):
   def maxKey(self):
     return -1
 
+class fetch_json(fetch_local_json):
+  pass
 
-class fetch_json(dict):
+
+class fetch_remote_json(dict):
 
   def __init__(self, path, **kwargs):
     self._path = path
     _token=str(uuid.uuid4())
     tokens=fetch_local_json("static/jsons/tokens.json")
-    tokens[_token]={"_ctx":path,"_token":_token}
-    req=requests.post(data_domain+"/fetch",{"_ctx":path,"_token":_token})
+    pdata={"_ctx":path,"_token":_token}
+    tokens[_token]=pdata
+    req=requests.post(data_domain+"/fetch",pdata)
     if req.status_code == 200:
       self._data = req.json()
       super().__init__(re, **kwargs)
