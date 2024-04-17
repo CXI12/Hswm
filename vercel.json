@@ -1,9 +1,0 @@
-{
-  "rewrites": [
-    {
-      "source": "/(.*)",
-      "destination": "main"
-    }
-  ],
-  "regions": ["hkg1"]
-}
