@@ -21,12 +21,10 @@ Flask-Compress
 Flask-Login
 Flask-reCaptcha
 Flask-SocketIO
-gevent-websocket
 google-auth-httplib2
 line-bot-sdk
 numpy
 Flask-Session
-gevent
 google-api-python-client
 google-auth-oauthlib
 orjson

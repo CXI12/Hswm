@@ -1,6 +1,5 @@
-from gevent import monkey
-
-monkey.patch_all()
+#from gevent import monkey
+#monkey.patch_all()
 import jinja2
 from modules.funcs import *
 from modules.imports import *
@@ -84,8 +83,8 @@ app.register_blueprint(study, url_perfix="/study")
 app.register_blueprint(grade, url_perfix="/grade")
 # app.register_blueprint(exam, url_perfix="/exam")
 
-socketio = SocketIO(app, async_mode='gevent')
-
+#socketio = SocketIO(app, async_mode='gevent')
+socketio=SocketIO(app)
 
 @login_manager.user_loader
 def uloader(user0):
@@ -1654,12 +1653,13 @@ def disconnect():
 
 compress = Compress()
 compress.init_app(app)
-http_server = WSGIServer(('0.0.0.0', 443),
+
+if __name__=="__main__":
+  http_server = WSGIServer(('0.0.0.0', 443),
                          app,
                          handler_class=WebSocketHandler,
                          log=sys.stdout)
 
-if __name__ == "__main__":
   # app.run(host="0.0.0.0", port=8080, debug=True)
   try:
     db = fetch_db("static/jsons/dbs/console.db")
