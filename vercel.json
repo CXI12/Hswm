@@ -1,4 +1,8 @@
-{
+{"functions": {
+    "main.py": {
+        "runtime":"Python"
+    }
+  },
     "rewrites": [
         { "source": "/(.*)", "destination": "/api/main" }
     ]
