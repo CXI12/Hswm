@@ -1,5 +1,5 @@
 {
-    "installCommand": "npm install --only=production",
+    "installCommand": "yarn install",
     "builds": [
         {
             "src": "main.py",
