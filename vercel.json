@@ -1,9 +1,14 @@
-{"functions": {
-    "main.py": {
-        "runtime":"Python@3.10.1"
-    }
-  },
+{
+    "builds": [
+        {
+            "src": "main.py",
+            "use": "@vercel/python"
+        }
+    ],
     "rewrites": [
-        { "source": "/(.*)", "destination": "/api/main" }
+        {
+            "source": "/(.*)",
+            "destination": "main"
+        }
     ]
 }
