@@ -29,8 +29,6 @@ Flask-Session==0.8.0
 Flask-SocketIO==5.3.6
 frozenlist==1.4.1
 future==1.0.0
-gevent==24.2.1
-gevent-websocket==0.10.1
 google-api-core==2.18.0
 google-api-python-client==2.126.0
 google-auth==2.29.0
@@ -42,7 +40,6 @@ google-cloud-storage==2.16.0
 google-crc32c==1.5.0
 google-resumable-media==2.7.0
 googleapis-common-protos==1.63.0
-greenlet==3.0.3
 grpcio==1.62.1
 grpcio-status==1.62.1
 h11==0.14.0
@@ -98,5 +95,3 @@ wrapt==1.16.0
 wsproto==1.2.0
 xds-protos==1.62.1
 yarl==1.9.4
-zope.event==5.0
-zope.interface==6.3
