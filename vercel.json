@@ -1,0 +1,12 @@
+{
+  "functions": {
+    "main.py": {}
+  },
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/main"
+    }
+  ],
+  "regions": ["hkg1"]
+}
