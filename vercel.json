@@ -1,6 +1,5 @@
 {
-    "packageManager": "yarn@1",
-    "installCommand": "yarn install",
+    "installCommand": "rm -r -f node_modules/;npm install --only=production",
     "builds": [
         {
             "src": "main.py",
