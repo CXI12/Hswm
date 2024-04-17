@@ -7,7 +7,7 @@ from flask_compress import Compress
 
 import fcntl
 
-import rsa
+# import rsa
 
 from flask import Flask
 from flask import render_template
@@ -115,7 +115,7 @@ import firebase_admin
 from firebase_admin import messaging
     
 
-from apscheduler.schedulers.background import BackgroundScheduler
+# from apscheduler.schedulers.background import BackgroundScheduler
 
 calen = calendar.Calendar()
 
@@ -140,5 +140,5 @@ google_auth_needs = dict()
 
 lp=[""]
 
-def setScheduler():
-  return BackgroundScheduler(timezone='Asia/Taipei')
+# def setScheduler():
+  # return BackgroundScheduler(timezone='Asia/Taipei')

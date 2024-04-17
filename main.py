@@ -124,24 +124,24 @@ def test():
 
 
 # @app.route("/auth",methods=["post"])
-def __auth():
-  req=request.form.to_dict()
-  returns={"stat":False}
-  ctx,token,Csign,Tsign=req["ctx"],req["_token"],req["C-signature"],req["T-signature"]
-  if rsa.verify(ctx, Csign, os.environ["AUTH_PUBLIC_KEY"]) and rsa.verify(token, Tsign, os.environ["AUTH_PUBLIC_KEY"]):
-    dctx = rsa.decrypt(ctx, os.environ["AUTH_PRIVATE_KEY"]).decode('utf8')
-    dtoken = rsa.decrypt(token, os.environ["AUTH_PRIVATE_KEY"]).decode('utf8')
-    tokens=fetch_local_json("static/jsons/tokens.json")
-    sdata=tokens[dtoken]
-    if sdata["_ctx"]==dctx and sdata["_token"]==dtoken:
-      returns["stat"]=True
-      returns["_re"]=generate_password_hash(dtoken)
-    else:
-      returns["message"]="Token and Context local data verify failed."
-  else:
-    returns["message"]="Context and Token verification failed."
+# def __auth():
+#   req=request.form.to_dict()
+#   returns={"stat":False}
+#   ctx,token,Csign,Tsign=req["ctx"],req["_token"],req["C-signature"],req["T-signature"]
+#   if rsa.verify(ctx, Csign, os.environ["AUTH_PUBLIC_KEY"]) and rsa.verify(token, Tsign, os.environ["AUTH_PUBLIC_KEY"]):
+#     dctx = rsa.decrypt(ctx, os.environ["AUTH_PRIVATE_KEY"]).decode('utf8')
+#     dtoken = rsa.decrypt(token, os.environ["AUTH_PRIVATE_KEY"]).decode('utf8')
+#     tokens=fetch_local_json("static/jsons/tokens.json")
+#     sdata=tokens[dtoken]
+#     if sdata["_ctx"]==dctx and sdata["_token"]==dtoken:
+#       returns["stat"]=True
+#       returns["_re"]=generate_password_hash(dtoken)
+#     else:
+#       returns["message"]="Token and Context local data verify failed."
+#   else:
+#     returns["message"]="Context and Token verification failed."
 
-  return jsonify(returns)
+#   return jsonify(returns)
 
 
 @app.route("/schqrc", methods=["post"])

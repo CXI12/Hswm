@@ -4,6 +4,8 @@ node_modules/
 .config/
 .upm/
 static.tar.gz
+psize.py
+re.txt
 
 
 #user data

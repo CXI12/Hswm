@@ -9,7 +9,6 @@ pytz
 qrcode
 reportlab
 requests
-rsa
 urllib3
 Werkzeug
 xds-protos
@@ -23,7 +22,6 @@ Flask-reCaptcha
 Flask-SocketIO
 google-auth-httplib2
 line-bot-sdk
-numpy
 Flask-Session
 google-api-python-client
 google-auth-oauthlib
