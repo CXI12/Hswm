@@ -1,5 +1,4 @@
 {
-    "installCommand": "rm -r -f node_modules/;npm install --only=production",
     "builds": [
         {
             "src": "main.py",
