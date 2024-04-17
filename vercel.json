@@ -1,6 +1,6 @@
 {"functions": {
     "main.py": {
-        "runtime":"Python"
+        "runtime":"Python@3.10.1"
     }
   },
     "rewrites": [
