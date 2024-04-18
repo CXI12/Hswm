@@ -119,9 +119,6 @@ from firebase_admin import messaging
 
 calen = calendar.Calendar()
 
-data_domain=os.environ["DATA_DOMAIN"]
-main_domain=os.environ["MAIN_DOMAIN"]
-
 
 pdfmetrics.registerFont(TTFont('kaiu', "./static/pdf/kaiu.ttf"))
 pdfmetrics.registerFont(TTFont('kaiub', "./static/pdf/kaiub.TTC"))
