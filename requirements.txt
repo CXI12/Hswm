@@ -94,3 +94,6 @@ wrapt==1.16.0
 wsproto==1.2.0
 xds-protos==1.62.1
 yarl==1.9.4
+gevent
+gevent-websocket
+apscheduler

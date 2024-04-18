@@ -2,7 +2,7 @@ from collections import UserDict
 
 from importlib.resources import path
 
-#from gevent.pywsgi import WSGIServer
+from gevent.pywsgi import WSGIServer
 from flask_compress import Compress
 
 import fcntl
@@ -26,7 +26,7 @@ from flask_socketio import emit
 from flask_socketio import join_room
 from flask_socketio import leave_room
 
-#from geventwebsocket.handler import WebSocketHandler
+from geventwebsocket.handler import WebSocketHandler
 
 import os
 import sys
@@ -115,7 +115,7 @@ import firebase_admin
 from firebase_admin import messaging
     
 
-# from apscheduler.schedulers.background import BackgroundScheduler
+from apscheduler.schedulers.background import BackgroundScheduler
 
 calen = calendar.Calendar()
 
@@ -137,5 +137,5 @@ google_auth_needs = dict()
 
 lp=[""]
 
-# def setScheduler():
-  # return BackgroundScheduler(timezone='Asia/Taipei')
+def setScheduler():
+  return BackgroundScheduler(timezone='Asia/Taipei')
