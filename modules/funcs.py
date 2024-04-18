@@ -98,52 +98,7 @@ class fetch_list(list):
     return -1
 
 
-# class fetch_remote_json(dict):
-
-#   def __init__(self, path, **kwargs):
-#     self._path = path
-#     _token=str(uuid.uuid4())
-#     tokens=fetch_local_json("static/jsons/tokens.json")
-#     pdata={"_ctx":path,"_token":_token}
-#     tokens[_token]=pdata
-#     req=requests.post(data_domain+"/fetch",pdata)
-#     if req.status_code == 200:
-#       self._data = req.json()
-#       super().__init__(re, **kwargs)
-#     else:
-#       write_json(path, {})
-#       super().__init__({}, **kwargs)
-
-#   def KVSwap(self):
-#     return {j: i for i, j in self._data.items()}
-
-#   def supd(self):
-#     write_json(self._path, dict(self.items()))
-
-#   def upd(self, data):
-#     self._data = data
-#     self.clear()
-#     for k, v in data.items():
-#       self[k] = v
-#     write_json(self._path, self._data)
-
-#   @property
-#   def is_dict(self):
-#     return True
-
-#   @property
-#   def maxKey(self):
-#     kl = list(self.keys())
-#     f = True
-#     for i in kl:
-#       if not i.isdigit(): f = False
-#     if f:
-#       kl = list(map(int, kl))
-#     return max(kl) if kl else -1
-
-
-
-class fetch_local_json(dict):
+class fetch_json(dict):
 
   def __init__(self, path, **kwargs):
     self._path = path
@@ -184,8 +139,6 @@ class fetch_local_json(dict):
       kl = list(map(int, kl))
     return max(kl) if kl else -1
 
-class fetch_json(fetch_local_json):
-  pass
 
 
 class fetch_users(fetch_json):

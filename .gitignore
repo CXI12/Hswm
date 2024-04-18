@@ -6,16 +6,7 @@ node_modules/
 static.tar.gz
 psize.py
 re.txt
-
-
-#user data
-static/pdfs
-static/jsons/grades
-static/jsons/pdfs
-static/jsons/selfCalendar
-static/jsons/dbs
-
-
+app.tar.gz
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
