@@ -57,7 +57,7 @@ class User(UserMixin):
 
   @classmethod
   def refresh_users(cls):
-    with open("./static/jsons/account.json") as f:
+    with open("static/jsons/account.json") as f:
       cls.users = json.load(f)
       f.close()
     return cls.users

@@ -129,7 +129,7 @@ def __line_login():
 
       logins.supd()
       try:
-        os.remove("./static/captchas/%s.png" % session["captcha"])
+        os.remove("static/captchas/%s.png" % session["captcha"])
       except:
         None
       session["user_pic"] = User.users[user.id]["avatar"]

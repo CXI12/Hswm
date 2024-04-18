@@ -1216,7 +1216,7 @@ def __login():
       )
       login_user(user, re)
       try:
-        os.remove("./static/captchas/%s.png" % session["captcha"])
+        os.remove("static/captchas/%s.png" % session["captcha"])
       except:
         None
       next = request.args.get('next', "/")
@@ -1321,7 +1321,7 @@ def __help(id):
              (request.form.get("email"), request.form.get("username")))
     elif id == 2:
       data = fetch_json("static/jsons/fgup.json")
-      with open("./static/jsons/fgup.json", mode="w") as f:
+      with open("static/jsons/fgup.json", mode="w") as f:
         data[request.form.get("email")] = {
           "time": get_today("%Y-%m-%d %H:%M"),
           "請求內容": request.form["auth"],
@@ -1352,8 +1352,8 @@ def __clear_captchas():
 
   if request.method.lower() == "post":
     if request.form["pswd"] == "2248":
-      for i in os.listdir("./static/captchas/"):
-        os.remove(f"./static/captchas/{i}")
+      for i in os.listdir("static/captchas/"):
+        os.remove(f"static/captchas/{i}")
       return render_template("redirects.html",
                              link="/",
                              letter="清除成功，重新導向首頁‧‧‧",
@@ -1520,7 +1520,7 @@ def __fgupr():
         data1.supd()
         return redirect("/fgupr")
       elif request.form.get("submit") == "送出":
-        data1 = fetch_json("./static/jsons/fgup.json")
+        data1 = fetch_json("static/jsons/fgup.json")
         mail(em, "帳密重設申請回覆", request.form.get("reply"))
         data1[em]["stat"] = "solved"
         data1.supd()
@@ -1539,7 +1539,7 @@ def __fgupr():
                                header=render_template("header.html"),
                                footer=render_template("footer.html"))
 
-    data0 = fetch_json("./static/jsons/fgup.json")
+    data0 = fetch_json("static/jsons/fgup.json")
 
     em = request.args.get("email")
     if em in data0.keys():

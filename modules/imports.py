@@ -120,8 +120,8 @@ from apscheduler.schedulers.background import BackgroundScheduler
 calen = calendar.Calendar()
 
 
-pdfmetrics.registerFont(TTFont('kaiu', "./static/pdf/kaiu.ttf"))
-pdfmetrics.registerFont(TTFont('kaiub', "./static/pdf/kaiub.TTC"))
+pdfmetrics.registerFont(TTFont('kaiu', "static/pdf/kaiu.ttf"))
+pdfmetrics.registerFont(TTFont('kaiub', "static/pdf/kaiub.TTC"))
 registerFontFamily("kaiu", normal="kaiu", bold="kaiub")
 
 line_bot_api = LineBotApi(os.environ['Channel_access_token'])

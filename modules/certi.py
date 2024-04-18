@@ -33,7 +33,7 @@ def __certificate():
                                letter="資料格式錯誤")
       else:
         data = sheets.get("資料")
-        jdata = fetch_json(f"./static/jsons/pdfs/{uid}.json")
+        jdata = fetch_json(f"static/jsons/pdfs/{uid}.json")
         for fdata in data:
           if data.index(fdata) == 0: continue
           if len(fdata) == 0: continue
@@ -48,7 +48,7 @@ def __certificate():
             i: j
             for i, j in zip(["科別", "年", "班", "學生", "獎項", "處室簡稱", "文號"], fdata)
           },uid)
-          os.rename(filename, f"./static/pdfs/{filename}")
+          os.rename(filename, f"static/pdfs/{filename}")
           ind = (max(list(map(int, jdata.keys()))) + 1) if jdata else 0
 
           pdf_data={"time": get_today("%Y-%m-%d"), "filename": filename}
@@ -58,7 +58,7 @@ def __certificate():
         jdata.supd()
         os.remove(session.get("uploaded_multid"))
         
-        uids=fetch_list(f"./static/jsons/anonymous_pdf.json")
+        uids=fetch_list(f"static/jsons/anonymous_pdf.json")
         uids.append(uid)
         uids.supd()
 
@@ -87,14 +87,14 @@ def __certificate():
                                header=render_template("header.html"),
                                footer=render_template("footer.html"))
       filename = pdf(fdata,uid) if (not fdata.get("no-back", False)) and user.is_authenticated else pdfp(fdata,uid)
-      os.rename(filename, f"./static/pdfs/{filename}")
+      os.rename(filename, f"static/pdfs/{filename}")
       pdf_data={"time": get_today("%Y-%m-%d"), "filename": filename}
       if not user.is_authenticated:
         pdf_data["user_ip"]=get_ip(request)
       wdata = dict()
       wdata["0"] = pdf_data
 
-      jdata = fetch_json(f"./static/jsons/pdfs/{uid}.json")
+      jdata = fetch_json(f"static/jsons/pdfs/{uid}.json")
       if not jdata:
         jdata.upd(wdata)
       else:
@@ -102,7 +102,7 @@ def __certificate():
         jdata[str(km)] = wdata["0"]
         jdata.supd()
         
-      uids=fetch_list(f"./static/jsons/anonymous_pdf.json")
+      uids=fetch_list(f"static/jsons/anonymous_pdf.json")
       uids.append(uid)
       uids.supd()
 
@@ -129,7 +129,7 @@ def __pdfl():
       return render_template("redirects.html",
                               link="/certi/pdfl",
                               letter="未輸入序號")
-    uids=fetch_list(f"./static/jsons/anonymous_pdf.json")
+    uids=fetch_list(f"static/jsons/anonymous_pdf.json")
     if not uid in uids:
       return render_template("redirects.html",
                               link="/certi/pdfl",
@@ -141,11 +141,11 @@ def __pdfl():
       
   uid=user.id if current_user.is_authenticated else user.certi_id
     
-  cd = fetch_json(f"./static/jsons/pdfs/{uid}.json")
+  cd = fetch_json(f"static/jsons/pdfs/{uid}.json")
   for key, value in cd.items():
     filename = value["filename"]
     cd[key]["filename"] = filename[:len(uid)]
-  data = fetch_json(f"./static/jsons/pdfs/{uid}.json")
+  data = fetch_json(f"static/jsons/pdfs/{uid}.json")
 
   return render_template("pdfl.html",
                          data=data,
@@ -160,9 +160,9 @@ def __dc():
   user = current_user
   uid=user.id if user.is_authenticated else user.certi_id
   if request.method.lower() == "post":
-    data = fetch_json(f"./static/jsons/pdfs/{uid}.json")
+    data = fetch_json(f"static/jsons/pdfs/{uid}.json")
     if not str(id) in data: return redirect("/certi/")
-    os.remove(f"./static/pdfs/{data[str(id)]['filename']}")
+    os.remove(f"static/pdfs/{data[str(id)]['filename']}")
     del data[str(id)]
     data.supd()
     return redirect("/certi/pdfl")

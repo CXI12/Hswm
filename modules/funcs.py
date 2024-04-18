@@ -214,7 +214,7 @@ def captcha():
     os.remove("static/captchas/%s.png" % session["captcha"])
   except:
     None
-  font_path = "./static/arial.ttf"
+  font_path = "static/arial.ttf"
   number = 5
   size = (100, 30)
   bgcolor = (255, 255, 255)
@@ -373,7 +373,7 @@ def pdf(strs: dict,user:str):
   filename = user + ".pdf"
   i = 0
   flag = False
-  for j in os.listdir("./static/pdfs/"):
+  for j in os.listdir("static/pdfs/"):
     if not j.startswith(user): continue
     fli = j.split(".")
     if "(" in fli[0] and ")" in fli[0]:
@@ -395,7 +395,7 @@ def pdf(strs: dict,user:str):
     filename = f"{fs}({str(i)}).{fli[1]}"
   canvas1 = canvas.Canvas(filename=filename, pagesize=A4)
   canvas1.setFont("kaiub", 50)
-  canvas1.drawImage("./static/pdf/pdf_back.jpg",
+  canvas1.drawImage("static/pdf/pdf_back.jpg",
                     0,
                     0,
                     preserveAspectRatio=True,
@@ -432,7 +432,7 @@ def pdfp(strs: dict,user:str):
   filename = user + ".pdf"
   i = 0
   flag = False
-  for j in os.listdir("./static/pdfs/"):
+  for j in os.listdir("static/pdfs/"):
     if not j.startswith(user): continue
     fli = j.split(".")
     if "(" in fli[0] and ")" in fli[0]:
@@ -454,7 +454,7 @@ def pdfp(strs: dict,user:str):
     filename = f"{fs}({str(i)}).{fli[1]}"
   canvas1 = canvas.Canvas(filename=filename, pagesize=A4)
   canvas1.setFont("kaiub", 50)
-  # canvas1.drawImage("./static/pdf/pdf_back.jpg",
+  # canvas1.drawImage("static/pdf/pdf_back.jpg",
   #                   0,
   #                   0,
   #                   preserveAspectRatio=True,

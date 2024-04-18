@@ -37,10 +37,10 @@ def __calendar(c):
                            footer=render_template("footer.html"),
                            Users=User.refresh_users())
   if user.is_teacher and c in user.classes and f"{c}.json" in os.listdir(
-      "./static/jsons/tasks/"):
-    data = fetch_json(f"./static/jsons/tasks/{c}.json")
+      "static/jsons/tasks/"):
+    data = fetch_json(f"static/jsons/tasks/{c}.json")
   elif user.is_asistnt and c == user.clas:
-    data = fetch_json(f"./static/jsons/tasks/{c}.json")
+    data = fetch_json(f"static/jsons/tasks/{c}.json")
   else:
     return render_template("error.html",
                            content="發生錯誤!若有問題請回報管理員",
@@ -91,10 +91,10 @@ def __tasking(c):
     for j in i:
       task[j] = False
   if user.is_teacher and c in user.classes and f"{c}.json" in os.listdir(
-      "./static/jsons/tasks/"):
-    data0 = fetch_json(f"./static/jsons/tasks/{c}.json")
+      "static/jsons/tasks/"):
+    data0 = fetch_json(f"static/jsons/tasks/{c}.json")
   elif user.is_asistnt and c == user.clas:
-    data0 = fetch_json(f"./static/jsons/tasks/{c}.json")
+    data0 = fetch_json(f"static/jsons/tasks/{c}.json")
   else:
     return render_template("error.html",
                            content="發生錯誤!若有問題請回報管理員",

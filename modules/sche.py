@@ -16,7 +16,7 @@ def __calendar():
   if not year: year = str(int(get_today("%Y")))
   if not month: month = str(int(get_today("%m")))
   if not current_user.is_student: return redirect("/")
-  data = fetch_json(f"./static/jsons/tasks/{user.clas}.json")
+  data = fetch_json(f"static/jsons/tasks/{user.clas}.json")
   dl = dict()
   mds = list(calen.itermonthdates(int(year), int(month)))
   data1 = {}
@@ -57,7 +57,7 @@ def __schedule():
     for j in i:
       task[j] = False
   if current_user.clas:
-    data0 = fetch_json(f"./static/jsons/tasks/{current_user.clas}.json")
+    data0 = fetch_json(f"static/jsons/tasks/{current_user.clas}.json")
   else:
     return render_template("error.html",
                            content="您目前沒有班級喔，若有錯誤請回報管理員",
@@ -100,7 +100,7 @@ def __task():
   if not current_user.is_student: return redirect("/")
   if current_user.clas:
     try:
-      content = fetch_json(f"./static/jsons/tasks/{current_user.clas}.json")[
+      content = fetch_json(f"static/jsons/tasks/{current_user.clas}.json")[
         str(id)]
     except KeyError:
       return render_template("error.html",
@@ -134,7 +134,7 @@ def __contnt(id, id2):
   if not current_user.is_student: return redirect("/")
   if current_user.clas:
     try:
-      content = fetch_json(f"./static/jsons/tasks/{current_user.clas}.json")[
+      content = fetch_json(f"static/jsons/tasks/{current_user.clas}.json")[
         str(id)][str(id2)]
       content["content"] = content["content"].replace("\n", "<br>")
     except KeyError:
