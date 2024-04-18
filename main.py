@@ -216,6 +216,7 @@ def handle_error(error):
   em = '\n--------------------\n發生錯誤:\n%s\n%s\n--------------------\n' % (
     get_today("%Y-%m-%dT%H-%M-%S"), error)
   logging.exception(em)
+  print(em)
   db = fetch_db("static/jsons/dbs/error.db")
   db.cs.execute('''CREATE TABLE IF NOT EXISTS main
              (id integer primary key,
