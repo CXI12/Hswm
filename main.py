@@ -1657,6 +1657,16 @@ compress.init_app(app)
 
 if __name__=="__main__":
   # app.run(host="0.0.0.0", port=8080, debug=True)
+  from dirs import dirs
+  for i in dirs:
+    if not os.path.exists(i):
+      try:
+        os.mkdir(i)
+        print(f"dir made: {i}")
+      except Exception as e:
+        print(f"error occurred when making dir: {i}\n\nERROR:{e}")
+    else:print(f"dir checked: {i}")
+
   http_server = WSGIServer(('0.0.0.0', int(os.environ.get("PORT",3000))),
                          app,
                          handler_class=WebSocketHandler,
