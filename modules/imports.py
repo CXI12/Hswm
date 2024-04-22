@@ -124,8 +124,11 @@ pdfmetrics.registerFont(TTFont('kaiu', "static/pdf/kaiu.ttf"))
 pdfmetrics.registerFont(TTFont('kaiub', "static/pdf/kaiub.TTC"))
 registerFontFamily("kaiu", normal="kaiu", bold="kaiub")
 
-line_bot_api = LineBotApi(os.environ['Channel_access_token'])
-handler = WebhookHandler(os.environ['Channel_secret'])
+channel_access_token=os.environ.get('Channel_access_token',os.environ.get("CHANNEL_ACCESS_TOKEN"))
+channel_secret=os.environ.get('Channel_secret',os.environ.get("CHANNEL_SECRET"))
+if channel_access_token and channel_secret:
+  line_bot_api = LineBotApi(channel_access_token)
+  handler = WebhookHandler(channel_secret)
 
 os.environ['OAUTHLIB_INSECURE_TRANSPORT'] = '1'
 

@@ -15,6 +15,7 @@ def __certificate():
   value["獎項"] = ""
   value["處室簡稱"] = ""
   value["文號"] = ""
+  value["日期"] = ""
   user = current_user
   uid=user.id if user.is_authenticated else user.certi_id
 
@@ -43,10 +44,10 @@ def __certificate():
                                    letter="資料格式錯誤")
           filename = pdf({
             i: j
-            for i, j in zip(["科別", "年", "班", "學生", "獎項", "處室簡稱", "文號"], fdata)
+            for i, j in zip(["科別", "年", "班", "學生", "獎項", "處室簡稱", "文號","日期"], fdata)
           },uid) if not form.get("no-back", False) else pdfp({
             i: j
-            for i, j in zip(["科別", "年", "班", "學生", "獎項", "處室簡稱", "文號"], fdata)
+            for i, j in zip(["科別", "年", "班", "學生", "獎項", "處室簡稱", "文號","日期"], fdata)
           },uid)
           os.rename(filename, f"static/pdfs/{filename}")
           ind = (max(list(map(int, jdata.keys()))) + 1) if jdata else 0
@@ -80,6 +81,8 @@ def __certificate():
       if not fdata.get("處室簡稱"):
         value["處室簡稱"] = "此欄不得為空"
       if not fdata.get("文號"):
+        value["文號"] = "此欄不得為空"
+      if not fdata.get("日期"):
         value["文號"] = "此欄不得為空"
       if "此欄不得為空" in value.values():
         return render_template("certi.html",

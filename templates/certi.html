@@ -75,6 +75,12 @@
             <div class="p-1 bg-light-subtle fs-6 mt-1 mx-1 px-auto text-center rounded-bottom"><input type="text"
                 name="文號" class="form-control" value="{{value['文號']}}" autocomplete="off" required></div>
           </div>
+          
+          <div class="col-12 col-md-2 mb-3 mb-sm-1 rounded shadow-sm">
+            <div class="bg-primary-subtle border-bottom rounded-top">日期</div>
+            <div class="p-1 bg-light-subtle fs-6 mt-1 mx-1 px-auto text-center rounded-bottom"><input type="date"
+                name="日期" class="form-control" value="{{value['日期'] or get_today('%Y-%m-%d')}}" autocomplete="off" required></div>
+          </div>
 
         </div>
         <div class="row justify-content-center">

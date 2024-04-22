@@ -14,7 +14,7 @@ flow = Flow.from_client_secrets_file(
     "https://www.googleapis.com/auth/userinfo.email", "openid"
   ],
   redirect_uri=
-  "https://project.106006project.repl.co/tools/callback?next=/tools/meet"
+  "https://hswm.up.railway.app/tools/callback?next=/tools/meet"
   # Replace this with your URL
 )
 

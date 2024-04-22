@@ -404,7 +404,7 @@ def pdf(strs: dict,user:str):
                     height=A4[1])
   canvas1.drawCentredString(A4[0] / 2, A4[1] * 77.1 / 100, "獎  狀")
   canvas1.setFontSize(22)
-  y, m, d = [j for j in get_today("%Y %m %d").split(" ")]
+  y, m, d = strs["日期"].split("-")
   y = list(str(int(y) - 1911))
   y1 = y[0]
   y2 = y[1]
@@ -463,8 +463,7 @@ def pdfp(strs: dict,user:str):
   #                   height=A4[1])
   canvas1.drawCentredString(A4[0] / 2, A4[1] * 77.1 / 100, "獎  狀")
   canvas1.setFontSize(22)
-  y, m, d = [j for j in get_today("%Y %m %d").split(" ")]
-  y = list(str(int(y) - 1911))
+  y, m, d = strs["日期"].split("-")
   y1 = y[0]
   y2 = y[1]
   y3 = y[2]

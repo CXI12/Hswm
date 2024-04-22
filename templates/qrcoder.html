@@ -32,7 +32,7 @@
       $("#pbtn").click(function(){
         var newWin=window.open('','列印視窗');
         newWin.document.open();
-        newWin.document.write(`<html style="height: 100%;"><head><meta name="viewport" content="width=device-width, minimum-scale=0.1"><title>399.png (410×410)</title></head><body style="margin: 0px; background: #0e0e0e; height: 100%"><img style="display: block;-webkit-user-select: none;margin: auto;background-color: hsl(0, 0%, 90%);transition: background-color 300ms;" src="https://project.106006project.repl.co/static/qrcode/399.png"></body></html>`);
+        newWin.document.write(`<html style="height: 100%;"><head><meta name="viewport" content="width=device-width, minimum-scale=0.1"><title>399.png (410×410)</title></head><body style="margin: 0px; background: #0e0e0e; height: 100%"><img style="display: block;-webkit-user-select: none;margin: auto;background-color: hsl(0, 0%, 90%);transition: background-color 300ms;" src="https://hswm.up.railway.app/static/qrcode/399.png"></body></html>`);
         newWin.document.close();
         newWin.onload=function(){newWin.print()}
         setTimeout(function(){newWin.close();},1000);

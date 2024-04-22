@@ -149,7 +149,7 @@ def __schqrc():
   if not "cls" in request.form: abort(400)
   name = request.form["cls"]
   if not name + ".png" in os.listdir("static/qrcode/"):
-    url = f"https://project.106006project.repl.co/cls?cls={request.form['cls']}"
+    url = f"https://hswm.up.railway.app/cls?cls={request.form['cls']}"
     qrc = qrcode.make(url)
     qrc.save(f"static/qrcode/{name}.png")
   return render_template("qrcoder.html",
@@ -757,7 +757,7 @@ def __verify():
         render_template(
           "htmail.html",
           content=
-          f"您的電子信箱已變更為:<br>{session.pop('new_email')}<br>若並非您執行此操作，請點擊<a href='https://project.106006project.repl.co/recover?token={token}' target='_blank'>此處</a>，盡速復原。<br>或複製以下網址並貼上至瀏覽器進行復原: https://project.106006project.repl.co/recover?token={token}"
+          f"您的電子信箱已變更為:<br>{session.pop('new_email')}<br>若並非您執行此操作，請點擊<a href='https://hswm.up.railway.app/recover?token={token}' target='_blank'>此處</a>，盡速復原。<br>或複製以下網址並貼上至瀏覽器進行復原: https://hswm.up.railway.app/recover?token={token}"
         ))
       return "OK"
   elif request.form.get("old"):
@@ -782,7 +782,7 @@ def __verify():
       render_template(
         "htmail.html",
         content=
-        f"您的密碼已變更<br>若並非您執行此操作，請點擊<a href='https://project.106006project.repl.co/recover?token={token}' target='_blank'>此處</a>，盡速復原。<br>或複製以下網址並貼上至瀏覽器進行復原: https://project.106006project.repl.co/recover?token={token}"
+        f"您的密碼已變更<br>若並非您執行此操作，請點擊<a href='https://hswm.up.railway.app/recover?token={token}' target='_blank'>此處</a>，盡速復原。<br>或複製以下網址並貼上至瀏覽器進行復原: https://hswm.up.railway.app/recover?token={token}"
       ))
     logout_user()
     return "OK"

@@ -261,7 +261,7 @@ def handle_postback(event):
       return
     rp = flexs["flex_logout"]
     rp["body"]["contents"][0]["action"][
-      "uri"] = "https://project.106006project.repl.co/qa/qas?defa=add&user_id=" + userid
+      "uri"] = "https://hswm.up.railway.app/qa/qas?defa=add&user_id=" + userid
     rp["body"]["contents"][0]["action"]["label"] = "按此發問"
     line_bot_api.reply_message(event.reply_token,
                                FlexSendMessage(alt_text="按此發問", contents=rp))
@@ -298,7 +298,7 @@ def handle_postback(event):
       return
     rp = flexs["flex_logout"]
     rp["body"]["contents"][0]["action"][
-      "uri"] = "https://project.106006project.repl.co/certi/certificate?user_id=" + userid
+      "uri"] = "https://hswm.up.railway.app/certi/certificate?user_id=" + userid
     rp["body"]["contents"][0]["action"]["label"] = "按此新增獎狀"
     line_bot_api.reply_message(event.reply_token,
                                FlexSendMessage(alt_text="按此新增獎狀", contents=rp))

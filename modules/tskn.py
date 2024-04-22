@@ -292,7 +292,7 @@ def __edit():
     notifications.supd()
 
     if len(pvalue.get("files", [])) > 0:
-      image = f"https://project.106006project.repl.co/" + pvalue["files"][0]
+      image = f"https://hswm.up.railway.app/" + pvalue["files"][0]
       messaging.send_multicast(
         messaging.MulticastMessage(
           tokens,
@@ -454,7 +454,7 @@ def __add(c):
     notifications.supd()
 
     if files[-1].filename:
-      image = f"https://project.106006project.repl.co/static/files/{c}/{id}/{m}/{secure_filename(files[-1].filename)}"
+      image = f"https://hswm.up.railway.app/static/files/{c}/{id}/{m}/{secure_filename(files[-1].filename)}"
       messaging.send_multicast(
         messaging.MulticastMessage(
           tokens,
@@ -553,7 +553,7 @@ def __del(id):
     notifications.supd()
 
     if len(data[str(id)][k].get("files", [])) > 0:
-      image = f"https://project.106006project.repl.co/" + data[str(
+      image = f"https://hswm.up.railway.app/" + data[str(
         id)][k]["files"][0]
       messaging.send_multicast(
         messaging.MulticastMessage(

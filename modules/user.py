@@ -18,7 +18,7 @@ class User(UserMixin):
   @property
   def http_avatar(self):
     self.refresh_users()
-    return ("https://project.106006project.repl.co/static/"
+    return ("https://hswm.up.railway.app/static/"
             if not self.users[self.id]["avatar"].startswith("http") else
             "") + self.users[self.id]["avatar"]
 
