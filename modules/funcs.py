@@ -464,6 +464,7 @@ def pdfp(strs: dict,user:str):
   canvas1.drawCentredString(A4[0] / 2, A4[1] * 77.1 / 100, "獎  狀")
   canvas1.setFontSize(22)
   y, m, d = strs["日期"].split("-")
+  y=str(int(y)-1911)
   y1 = y[0]
   y2 = y[1]
   y3 = y[2]
