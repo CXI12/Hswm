@@ -37,49 +37,49 @@
           <div class="col-12 col-md-2 mb-3 mb-sm-1 rounded shadow-sm">
             <div class="bg-primary-subtle border-bottom rounded-top">科別</div>
             <div class="p-1 bg-light-subtle fs-6 mt-1 mx-1 px-auto text-center rounded-bottom"><input type="text"
-                name="科別" class="form-control" value="{{value['科別']}}" autocomplete="off" required></div>
+                name="科別" class="form-control input-fields" value="{{value['科別']}}" autocomplete="off" required></div>
           </div>
 
           <div class="col-12 col-md-2 mb-3 mb-sm-1 rounded shadow-sm">
             <div class="bg-primary-subtle border-bottom rounded-top">年</div>
             <div class="p-1 bg-light-subtle fs-6 mt-1 mx-1 px-auto text-center rounded-bottom"><input type="text"
-                name="年" class="form-control" value="{{value['年']}}" autocomplete="off" required></div>
+                name="年" class="form-control input-fields" value="{{value['年']}}" autocomplete="off" required></div>
           </div>
 
           <div class="col-12 col-md-2 mb-3 mb-sm-1 rounded shadow-sm">
             <div class="bg-primary-subtle border-bottom rounded-top">班</div>
             <div class="p-1 bg-light-subtle fs-6 mt-1 mx-1 px-auto text-center rounded-bottom"><input type="text"
-                name="班" class="form-control" value="{{value['班']}}" autocomplete="off" required></div>
+                name="班" class="form-control input-fields" value="{{value['班']}}" autocomplete="off" required></div>
           </div>
 
           <div class="col-12 col-md-2 mb-3 mb-sm-1 rounded shadow-sm">
             <div class="bg-primary-subtle border-bottom rounded-top">學生</div>
             <div class="p-1 bg-light-subtle fs-6 mt-1 mx-1 px-auto text-center rounded-bottom"><input type="text"
-                name="學生" class="form-control" value="{{value['學生']}}" autocomplete="off" required></div>
+                name="學生" class="form-control input-fields" value="{{value['學生']}}" autocomplete="off" required></div>
           </div>
 
           <div class="col-12 col-md-2 mb-3 mb-sm-1 rounded shadow-sm">
             <div class="bg-primary-subtle border-bottom rounded-top">獎項</div>
             <div class="p-1 bg-light-subtle fs-6 mt-1 mx-1 px-auto text-center rounded-bottom"><input type="text"
-                name="獎項" class="form-control" value="{{value['獎項']}}" autocomplete="off" required></div>
+                name="獎項" class="form-control input-fields" value="{{value['獎項']}}" autocomplete="off" required></div>
           </div>
 
           <div class="col-12 col-md-2 mb-3 mb-sm-1 rounded shadow-sm">
             <div class="bg-primary-subtle border-bottom rounded-top">處室簡稱</div>
             <div class="p-1 bg-light-subtle fs-6 mt-1 mx-1 px-auto text-center rounded-bottom"><input type="text"
-                name="處室簡稱" class="form-control" value="{{value['處室簡稱']}}" autocomplete="off" required></div>
+                name="處室簡稱" class="form-control input-fields" value="{{value['處室簡稱']}}" autocomplete="off" required></div>
           </div>
 
           <div class="col-12 col-md-2 mb-3 mb-sm-1 rounded shadow-sm">
             <div class="bg-primary-subtle border-bottom rounded-top">文號</div>
             <div class="p-1 bg-light-subtle fs-6 mt-1 mx-1 px-auto text-center rounded-bottom"><input type="text"
-                name="文號" class="form-control" value="{{value['文號']}}" autocomplete="off" required></div>
+                name="文號" class="form-control input-fields" value="{{value['文號']}}" autocomplete="off" required></div>
           </div>
           
           <div class="col-12 col-md-2 mb-3 mb-sm-1 rounded shadow-sm">
             <div class="bg-primary-subtle border-bottom rounded-top">日期</div>
             <div class="p-1 bg-light-subtle fs-6 mt-1 mx-1 px-auto text-center rounded-bottom"><input type="date"
-                name="日期" class="form-control" value="{{value['日期'] or get_today('%Y-%m-%d')}}" autocomplete="off" required></div>
+                name="日期" class="form-control input-fields" value="{{value['日期'] or get_today('%Y-%m-%d')}}" autocomplete="off" required></div>
           </div>
 
         </div>
@@ -125,8 +125,10 @@
       $("#multid").change(function () {
         if (!$(this).val()) {
           $("#multidLabel").html("上傳")
+          $(".input-fields").removeAttr("required")
         } else {
           $("#multidLabel").html($(this).val().slice($(this).val().lastIndexOf("\\") + 1))
+          $(".input-fields").attr('required', 'True');
         }
       })
     })
