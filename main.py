@@ -725,6 +725,7 @@ def __user_settings():
 @fresh_login_required
 def __verify():
   user = current_user
+  if current_user in ["stu001","teacher001"]:return "測試帳號不得變更電子郵件、名稱及密碼。",403
   r = r'\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,7}\b'
   if request.form.get("email"):
     emails = fetch_json("static/jsons/email.json")

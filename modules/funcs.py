@@ -255,13 +255,8 @@ from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 
 
-class HelpModeError(Exception):
-  pass
-
-
 def mailto(address: str, mode: int, args: tuple):
   if address.endswith("@demo.com"):return
-  if mode > 2: raise HelpModeError("Mode argument should be lower than 3")
   title = "帳號" if mode == 0 else "密碼" if mode == 1 else "帳密"
   content = MIMEMultipart()  #建立MIMEMultipart物件
   content["subject"] = f"高中職小幫手｜登入協助 — {title}"  #郵件標題
