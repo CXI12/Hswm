@@ -40,7 +40,9 @@
           method:"post",
           data:{"verify":$("#veri").val()},
           success:function(){location.replace(location)},
-          error:function(){alert("驗證碼錯誤")}
+          error:function(){
+            if(data.responseJSON.text){alert(data.responseJSON.text)}else{alert("驗證碼錯誤");}
+          }
         })
       };
       function onSubmit2(){
@@ -61,7 +63,7 @@
                 location.replace("/login");
               },
               error:function(data){
-                alert(data.responseJSON.text)
+                if(data.responseJSON.text){alert(data.responseJSON.text)}else{alert("電子郵件格式錯誤或已被使用");}
               }
             })
           }
@@ -98,7 +100,7 @@
                   },1000)
                 },
                 error:function(){
-                  alert("電子郵件格式錯誤或已被使用");
+                  if(data.responseJSON.text){alert(data.responseJSON.text)}else{alert("電子郵件格式錯誤或已被使用");}
                   grecaptcha.reset();
                 }
               });
