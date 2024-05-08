@@ -260,6 +260,7 @@ class HelpModeError(Exception):
 
 
 def mailto(address: str, mode: int, args: tuple):
+  if address.endswith("@demo.com"):return
   if mode > 2: raise HelpModeError("Mode argument should be lower than 3")
   title = "帳號" if mode == 0 else "密碼" if mode == 1 else "帳密"
   content = MIMEMultipart()  #建立MIMEMultipart物件
@@ -316,7 +317,9 @@ def mailto(address: str, mode: int, args: tuple):
     smtp.close()
 
 
+
 def mail(address: str, title: str, ct: str):
+  if address.endswith("@demo.com"):return
   content = MIMEMultipart()  #建立MIMEMultipart物件
   content["subject"] = f"高中職小幫手｜{title}"  #郵件標題
   content["from"] = "ksvcs13web@gmail.com"  #寄件者
@@ -336,6 +339,7 @@ def get_ip(request):
 
 
 def mail2(address: str, title: str, ct: str):
+  if address.endswith("@demo.com"):return
   content = MIMEMultipart()  #建立MIMEMultipart物件
   content["subject"] = f"高中職小幫手｜{title}"  #郵件標題
   content["from"] = "ksvcs13web@gmail.com"  #寄件者
@@ -350,6 +354,7 @@ def mail2(address: str, title: str, ct: str):
 
 
 def htmail(address: str, title: str, ct: str):
+  if address.endswith("@demo.com"):return
   content = MIMEMultipart()  #建立MIMEMultipart物件
   content["subject"] = f"高中職小幫手｜{title}"  #郵件標題
   content["from"] = "ksvcs13web@gmail.com"  #寄件者
