@@ -34,7 +34,7 @@
               "action": {
                 "type": "uri",
                 "label": "問題回報",
-                "uri": "https://hswm.up.railway.app/reporter"
+                "uri": "https://project.106006project.repl.co/reporter"
               },
               "style": "primary",
               "adjustMode": "shrink-to-fit",
@@ -78,7 +78,7 @@
           "action": {
             "type": "uri",
             "label": "按此綁定帳號",
-            "uri": "https://hswm.up.railway.app/line_login?user_id="
+            "uri": "https://project.106006project.repl.co/line_login?user_id="
           },
           "style": "primary"
         }
@@ -97,7 +97,7 @@
           "action": {
             "type": "uri",
             "label": "按此解除帳號綁定",
-            "uri": "https://hswm.up.railway.app/line_logout?user_id="
+            "uri": "https://project.106006project.repl.co/line_logout?user_id="
           },
           "style": "primary"
         }
@@ -177,7 +177,7 @@
             "action": {
               "type": "uri",
               "label": " 內容",
-              "uri": "https://hswm.up.railway.app/sche/"
+              "uri": "https://project.106006project.repl.co/sche/"
             },
             "style": "primary",
             "color": "#4469FF"
@@ -262,7 +262,7 @@
               "action": {
                 "type": "uri",
                 "label": "問題回報",
-                "uri": "https://hswm.up.railway.app/reporter"
+                "uri": "https://project.106006project.repl.co/reporter"
               },
               "style": "primary",
               "adjustMode": "shrink-to-fit",
@@ -393,7 +393,7 @@
               "action": {
                 "type": "uri",
                 "label": "問題回報",
-                "uri": "https://hswm.up.railway.app/reporter"
+                "uri": "https://project.106006project.repl.co/reporter"
               },
               "style": "primary",
               "adjustMode": "shrink-to-fit",
@@ -524,7 +524,7 @@
               "action": {
                 "type": "uri",
                 "label": "問題回報",
-                "uri": "https://hswm.up.railway.app/reporter"
+                "uri": "https://project.106006project.repl.co/reporter"
               },
               "style": "primary",
               "adjustMode": "shrink-to-fit",
@@ -588,7 +588,7 @@
             "action": {
               "type": "uri",
               "label": "新增",
-              "uri": "https://hswm.up.railway.app/tskn/add"
+              "uri": "https://project.106006project.repl.co/tskn/add"
             },
             "style": "primary",
             "color": "#4469FF"
@@ -626,7 +626,7 @@
               "action": {
                 "type": "uri",
                 "label": "前往首頁",
-                "uri": "https://hswm.up.railway.app/"
+                "uri": "https://project.106006project.repl.co/"
               },
               "style": "primary",
               "color": "#4469FF"
