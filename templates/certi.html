@@ -125,10 +125,10 @@
       $("#multid").change(function () {
         if (!$(this).val()) {
           $("#multidLabel").html("上傳")
-          $(".input-fields").removeAttr("required")
+          $(".input-fields").prop('required', true)
         } else {
           $("#multidLabel").html($(this).val().slice($(this).val().lastIndexOf("\\") + 1))
-          $(".input-fields").attr('required', 'True');
+          $(".input-fields").removeProp("required")
         }
       })
     })
