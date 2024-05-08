@@ -99,7 +99,7 @@
                     $("#verify").html(time+"秒後重試");}
                   },1000)
                 },
-                error:function(){
+                error:function(data){
                   if(data.responseJSON.text){alert(data.responseJSON.text)}else{alert("電子郵件格式錯誤或已被使用");}
                   grecaptcha.reset();
                 }
