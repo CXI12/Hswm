@@ -40,7 +40,7 @@
           method:"post",
           data:{"verify":$("#veri").val()},
           success:function(){location.replace(location)},
-          error:function(){
+          error:function(data){
             if(data.responseJSON.text){alert(data.responseJSON.text)}else{alert("驗證碼錯誤");}
           }
         })
