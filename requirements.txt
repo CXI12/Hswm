@@ -80,7 +80,7 @@ python-socketio==5.11.2
 pytz==2024.1
 qrcode==7.4.2
 reportlab==4.1.0
-requests==2.31.0
+requests==2.32.0
 requests-oauthlib==2.0.0
 rsa==4.9
 simple-websocket==1.0.0
