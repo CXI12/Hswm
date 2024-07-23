@@ -40,10 +40,10 @@ def _get_access_token():
   return credentials.token
 
 
-google_auth_needs["headers"] = {
-  'Authorization': 'Bearer ' + _get_access_token(),
-  'Content-Type': 'application/json; UTF-8',
-}
+# google_auth_needs["headers"] = {
+#   'Authorization': 'Bearer ' + _get_access_token(),
+#   'Content-Type': 'application/json; UTF-8',
+# }
 
 app.config['PERMANENT_SESSION_LIFETIME'] = datetime.timedelta(days=90)
 
