@@ -1,6 +1,5 @@
-**Read this in other languages: [English](README.md), [中文](README_zh.md).**  
-.  
-.  
+**Read this in other languages: [English](README.md), [中文](README_zh_TW.md).**  
+. 
 .  
 # 高中職小幫手 專案
 ### 高中職小幫手（改善教學現場之整合化網站系統平台）
