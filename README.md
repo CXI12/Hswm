@@ -3,7 +3,7 @@
 .  
 .  
 # HSWM projection
-### HSWM - High School WingMan ( Integrated High School Routing Assistance Platform )
+### HSWM - High School WingMan ( Integrated Website Platform of Teaching Site )
 
 This project purposed to create a integrated platform to help high school students and teachers in Taiwan on processing daily routines, 
 such as homeworks, daily tasks, announcements, learning, courses managements, and etc.
