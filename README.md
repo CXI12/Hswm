@@ -1,6 +1,5 @@
-**Read this in other languages: [English](README.md), [中文](README_zh.md).**  
-.  
-.  
+**Read this in other languages: [English](README.md), [中文](README_zh_TW.md).**  
+. 
 .  
 # HSWM projection
 ### HSWM - High School WingMan ( Integrated Website Platform of Teaching Site )
